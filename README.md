@@ -10,3 +10,8 @@ The requirements are:
  - PHP5
 
 Installation:
+ - Unzip the files to your webroot, or a subdirectory thereof.
+ - Upload your torrent files to the torrents/ subdirectort of the PHPlinuxTrack directory.
+ - If using Redis on localhost:6379, setup should now be complete. If not, you'll have to update the relevant settings in inc/config.php. 
+ - If you want to use a funky directory for your torrents, you'll have to set this up in config.php, along with giving PHPlinuxTrack a suitable web path to serve downloads from that directory on.
+ - You can adjust caching parametres as you see fit. However, I recommend against setting a value lower than 300 for the scrapeCache directive, to save the bandwidth of the generous tracker providers out there.
