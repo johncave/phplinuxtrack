@@ -30,7 +30,6 @@ The requirements are:
 - Support for Memcache as well as Redis.
 - Changing the link in the Name column (between .torrent file or magnet link) based on number of seeders.
 - Prettier loading animation.
-- 
 
 ## Note
 Placing non .torrent files in the torrent directory will cause no end of errors. I consider this software to be a beta, but as it does no writing, it shouldn't corrupt any data.
