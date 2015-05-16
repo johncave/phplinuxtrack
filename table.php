@@ -68,7 +68,7 @@ if($table){
 	#Store the table in Redis then print it.
 	#print "Generated table";
 	$redis -> set('pltt', $table);
-	$redis -> setTimeout('pltt', $CONFIG['tableCache']);
+	$redis -> expire('pltt', $CONFIG['tableCache']);
 	$redis -> set('pltgt', gmdate("H:i:s"));
 	#$redis -> set('plttage', time());
 	print $table;
