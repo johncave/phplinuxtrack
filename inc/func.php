@@ -17,6 +17,9 @@ include_once ("lang/".$CONFIG['lang'].".php");
 
 
 #Define variables ready for table creation to start
+if(!class_exists("Redis")) {
+	include_once "redis.php";
+}
 $redis = new Redis();
 $redis -> connect($CONFIG['redisHost'], $CONFIG['redisPort']);
 $offlineTrackers = 0;
@@ -121,7 +124,7 @@ function scrapeTorrent($url,$hash){
 			$scraper = new udptscraper($timeout);
 			$ret = $scraper->scrape($url,array($hash));
 			$redis -> set("plts".$hash, json_encode($ret));
-			$redis -> setTimeout ("plts".$hash, $CONFIG['scrapeCache']);
+			$redis -> expire ("plts".$hash, $CONFIG['scrapeCache']);
 			#print "<br />Scrape results for ".$url." were: ".json_encode($ret);
 			return($ret);
 		}
@@ -132,7 +135,7 @@ function scrapeTorrent($url,$hash){
 			 "completed" => 0
 				));
 			$redis -> set("plts".$hash, json_encode($ret));
-			$redis -> setTimeout ("plts".$hash, $CONFIG['scrapeCache']*3); #The caching length of trackers that seem down is increased to help them to recover if they're overloaded and to increase page load speed (timeouts are expensive to load speed.
+			$redis -> expire ("plts".$hash, $CONFIG['scrapeCache']*3); #The caching length of trackers that seem down is increased to help them to recover if they're overloaded and to increase page load speed (timeouts are expensive to load speed.
 			$offlineTrackers++;
 			return $ret;
 		}
