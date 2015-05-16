@@ -1,0 +1,16 @@
+<?php
+## PHPlinuxTrack English language file ##
+
+$LANG = array(
+	"name" => "Nombre",
+	"headhtml" => "<center><img src=\"http://assets.johncave.co.nz/images/OpenMandrivaLogo.png\" width=\"60%\"/></center>",
+	"seeders" => "Subidias",
+	"leechers" => "Descargandos",
+	"size" => "Tama&ntilde;o",
+	"complete" => "Veces Completado",
+	"shared" => "Datos Compartidos",
+	"get" => "Obtener Torrent",	
+	"getFile" => "Obtener .torrent",
+	"getMagnet" => "Descarger por magnet link."
+	
+);
