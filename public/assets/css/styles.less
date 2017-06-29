@@ -1,0 +1,49 @@
+@highlight_colour: #E2266E;
+@link_colour: #005C9D;
+@attribution_colour: #800080;
+
+html {
+  padding: 7px;
+}
+
+a {
+  color: @highlight_colour;
+  &:hover {
+    color: @link_colour;
+    text-shadow: 0 0 30px #E2266E;
+  }
+}
+
+div#attribution {
+  text-align: center;
+  margin-top: 5%;
+  a {
+    color: @attribution_colour;
+  }
+}
+
+div#table {
+  margin-top: 5%;
+}
+
+.alignleft {
+  text-align: left;
+  a {
+    color: @link_colour;
+    text-shadow: none;
+    &:hover {
+      color: @highlight_colour;
+    }
+  }
+}
+
+colgroup {
+  col {
+    .width-percent-8 {
+      width: 8%;
+    }
+    .width-percent-10 {
+      width: 10%;
+    }
+  }
+}
