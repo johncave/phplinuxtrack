@@ -16,7 +16,7 @@ use johncave\PhpLinuxTrack;
 
 <div id="attribution">
     <span>Powered by </span><a href="//github.com/johncave/phplinuxtrack">PHPlinuxTrack
-        0.3</a><span>, created by </span>
+        1.0.0</a><span>, created by </span>
     <a href="//johncave.co.nz">John Cave</a><span>.</span>
     <br/>
     <span>Updated at <?= $oRedis->get('pltgt') ?> UTC.</span>
