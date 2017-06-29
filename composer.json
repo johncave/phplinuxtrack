@@ -1,0 +1,12 @@
+{
+  "name": "johncave/phplinuxtrack",
+  "description": "A simple PHP torrent display mechanism designed to ease and beautify managing the torrent files of a linux distro or other software project.",
+  "minimum-stability": "stable",
+  "type": "project",
+  "license": "GPL-2.0",
+  "autoload": {
+    "psr-4": {
+      "johncave\\PhpLinuxTrack\\": "src/"
+    }
+  }
+}
